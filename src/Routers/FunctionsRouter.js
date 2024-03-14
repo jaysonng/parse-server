@@ -1,4 +1,5 @@
 // FunctionsRouter.js
+
 var Parse = require('parse/node').Parse,
   triggers = require('../triggers');
 
@@ -11,7 +12,7 @@ import { logger } from '../logger';
 function parseObject(obj, config) {
   if (Array.isArray(obj)) {
     return obj.map(item => {
-      return parseObject(item, config);
+      return parseObject(item);
     });
   } else if (obj && obj.__type == 'Date') {
     return Object.assign(new Date(obj.iso), obj);
