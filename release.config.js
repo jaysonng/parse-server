@@ -39,7 +39,6 @@ async function config() {
       'release',
       { name: 'alpha', prerelease: true },
       { name: 'beta', prerelease: true },
-      'next-major',
       // Long-Term-Support branches
       { name: 'release-6.x.x', range: '6.x.x', channel: '6.x.x' },
     ],
